@@ -47,7 +47,9 @@
         // Close all dropdowns
         allDropdowns.forEach(dropdown => {
           if (dropdown !== clickedContent) {
-            dropdown.classList.remove('show');
+            dropdown.style.display = 'block'
+          } else {
+            dropdown.style.display = 'none'
           }
         });
 
