@@ -39,6 +39,23 @@
     </style>
   </head>
   <body>
+    <script>
+      function myFunction(event) {
+        const allDropdowns = document.querySelectorAll('.dropdown-content');
+        const clickedContent = event.currentTarget.nextElementSibling;
+
+        // Close all dropdowns
+        allDropdowns.forEach(dropdown => {
+          if (dropdown !== clickedContent) {
+            dropdown.classList.remove('show');
+          }
+        });
+
+        // Toggle the clicked one
+        clickedContent.classList.toggle('show');
+      }
+    </script>
+
     <div class="panel">
       <!--div1 -->
       <div class="card-content div1">
